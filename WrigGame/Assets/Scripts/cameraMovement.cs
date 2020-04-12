@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class cameraMovement : MonoBehaviour {
     public float rotationSpeed = 1;
-    
     public Transform target, player;
     float mouseX, mouseY;
 
@@ -20,6 +19,6 @@ public class cameraMovement : MonoBehaviour {
         transform.LookAt(target);
 
         target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
-        player.rotation = Quaternion.Euler(0, mouseX, 0);
+        player.rotation = Quaternion.Euler(0, mouseX, 0);    
     }
 }
