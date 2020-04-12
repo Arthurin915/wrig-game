@@ -19,8 +19,11 @@ public class bullet : MonoBehaviour
     void OnTriggerEnter(Collider collider) 
     {
         if(collider.transform.tag == "Enemy") {
-            print(collider.transform.name);
             collider.gameObject.SendMessage("takeDamage", 20);
+            Destroy(gameObject);
+        }
+        if(collider.transform.tag == "Ground") {
+            Destroy(gameObject);
         }
     }
 }
